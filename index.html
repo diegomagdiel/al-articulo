@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Al Artículo</title>
+  <meta name="description" content="Prototipo: buscador rápido de leyes chilenas con notas personales.">
+  <meta name="theme-color" content="#1f3a5f">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icono.svg" type="image/svg+xml">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Al Artículo">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="barra">
+    <a class="marca" href="#/" aria-label="Inicio">§</a>
+    <div class="caja-busqueda">
+      <input id="q" type="search" inputmode="search" autocomplete="off" autocorrect="off" autocapitalize="off"
+             spellcheck="false" placeholder="182 cpc · art 1698 cc · nulidad" aria-label="Buscar artículo">
+      <ul id="sugerencias" class="sugerencias" role="listbox" hidden></ul>
+    </div>
+    <button id="filtro-notas" class="filtro-notas" aria-pressed="false" aria-label="Buscar solo en artículos con notas" title="Solo artículos con notas">📝</button>
+  </header>
+
+  <main id="vista" tabindex="-1"></main>
+
+  <div id="barra-subrayado" class="barra-subrayado" hidden></div>
+
+  <div id="aviso" class="aviso" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

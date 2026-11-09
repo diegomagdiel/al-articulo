@@ -1,0 +1,6 @@
+# Leyes traídas a pedido por servidor.py (se regeneran solas)
+datos/cache/
+__pycache__/
+*.pyc
+.env
+.env.*

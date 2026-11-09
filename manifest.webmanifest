@@ -1,0 +1,13 @@
+{
+  "name": "Al Artículo",
+  "short_name": "Al Artículo",
+  "description": "Prototipo: buscador rápido de leyes chilenas con notas personales.",
+  "lang": "es-CL",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f7f5f0",
+  "theme_color": "#1f3a5f",
+  "icons": [
+    { "src": "icono.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

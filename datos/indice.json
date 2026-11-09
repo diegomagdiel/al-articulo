@@ -1,0 +1,722 @@
+{
+ "actualizado": "2026-11-09",
+ "codigos": [
+  {
+   "sigla": "cpr",
+   "nombre": "Constitución Política",
+   "alias": [
+    "cpr",
+    "constitucion",
+    "const",
+    "cpe",
+    "carta fundamental"
+   ],
+   "idNorma": 242302,
+   "identificacion": "Decreto 100",
+   "vigenteDesde": "2026-04-16",
+   "articulos": 224,
+   "descargado": "2026-11-09"
+  },
+  {
+   "sigla": "cc",
+   "nombre": "Código Civil",
+   "alias": [
+    "cc",
+    "civil",
+    "codigo civil",
+    "cod civil"
+   ],
+   "idNorma": 172986,
+   "identificacion": "DFL 1",
+   "vigenteDesde": "2025-08-28",
+   "articulos": 2567,
+   "descargado": "2026-11-03"
+  },
+  {
+   "sigla": "cpc",
+   "nombre": "Código de Procedimiento Civil",
+   "alias": [
+    "cpc",
+    "procedimiento civil",
+    "proc civil",
+    "pc"
+   ],
+   "idNorma": 22740,
+   "identificacion": "Ley 1552",
+   "vigenteDesde": "2022-09-15",
+   "articulos": 932,
+   "descargado": "2026-11-03"
+  },
+  {
+   "sigla": "cp",
+   "nombre": "Código Penal",
+   "alias": [
+    "cp",
+    "penal",
+    "codigo penal"
+   ],
+   "idNorma": 1984,
+   "identificacion": "Codigo PENAL",
+   "vigenteDesde": "2026-08-20",
+   "articulos": 677,
+   "descargado": "2026-11-03"
+  },
+  {
+   "sigla": "cpp",
+   "nombre": "Código Procesal Penal",
+   "alias": [
+    "cpp",
+    "procesal penal",
+    "cpop",
+    "proc penal"
+   ],
+   "idNorma": 176595,
+   "identificacion": "Ley 19696",
+   "vigenteDesde": "2026-10-16",
+   "articulos": 563,
+   "descargado": "2026-11-09"
+  },
+  {
+   "sigla": "ct",
+   "nombre": "Código del Trabajo",
+   "alias": [
+    "ct",
+    "trabajo",
+    "laboral",
+    "codigo del trabajo",
+    "cdt",
+    "ctrab"
+   ],
+   "idNorma": 207436,
+   "identificacion": "DFL 1",
+   "vigenteDesde": "2026-07-23",
+   "articulos": 736,
+   "descargado": "2026-11-03"
+  },
+  {
+   "sigla": "ccom",
+   "nombre": "Código de Comercio",
+   "alias": [
+    "ccom",
+    "comercio",
+    "cdc",
+    "codigo de comercio",
+    "cco"
+   ],
+   "idNorma": 1974,
+   "identificacion": "Codigo DE COMERCIO",
+   "vigenteDesde": "2023-09-23",
+   "articulos": 1524,
+   "descargado": "2026-11-03"
+  },
+  {
+   "sigla": "cot",
+   "nombre": "Código Orgánico de Tribunales",
+   "alias": [
+    "cot",
+    "organico de tribunales",
+    "tribunales",
+    "organico"
+   ],
+   "idNorma": 25563,
+   "identificacion": "Codigo ORGÁNICO DE TRIBUNALES",
+   "vigenteDesde": "2026-04-02",
+   "articulos": 680,
+   "descargado": "2026-11-03"
+  },
+  {
+   "sigla": "ctrib",
+   "nombre": "Código Tributario",
+   "alias": [
+    "ctrib",
+    "tributario",
+    "codigo tributario",
+    "ctb"
+   ],
+   "idNorma": 6374,
+   "identificacion": "Decreto Ley 830",
+   "vigenteDesde": "2026-11-01",
+   "articulos": 254,
+   "descargado": "2026-11-09"
+  },
+  {
+   "sigla": "cag",
+   "nombre": "Código de Aguas",
+   "alias": [
+    "cag",
+    "aguas",
+    "codigo de aguas",
+    "ca"
+   ],
+   "idNorma": 5605,
+   "identificacion": "DFL 1122",
+   "vigenteDesde": "2026-10-09",
+   "articulos": 389,
+   "descargado": "2026-11-03"
+  },
+  {
+   "sigla": "cmin",
+   "nombre": "Código de Minería",
+   "alias": [
+    "cmin",
+    "mineria",
+    "codigo de mineria",
+    "cm"
+   ],
+   "idNorma": 29668,
+   "identificacion": "Ley 18248",
+   "vigenteDesde": "2026-11-05",
+   "articulos": 256,
+   "descargado": "2026-11-09"
+  },
+  {
+   "sigla": "csan",
+   "nombre": "Código Sanitario",
+   "alias": [
+    "csan",
+    "sanitario",
+    "codigo sanitario",
+    "cs"
+   ],
+   "idNorma": 5595,
+   "identificacion": "DFL 725",
+   "vigenteDesde": "2025-11-18",
+   "articulos": 221,
+   "descargado": "2026-11-09"
+  },
+  {
+   "sigla": "caer",
+   "nombre": "Código Aeronáutico",
+   "alias": [
+    "caer",
+    "aeronautico",
+    "codigo aeronautico"
+   ],
+   "idNorma": 30287,
+   "identificacion": "Ley 18916",
+   "vigenteDesde": "2026-01-19",
+   "articulos": 218,
+   "descargado": "2026-11-03"
+  },
+  {
+   "sigla": "cjm",
+   "nombre": "Código de Justicia Militar",
+   "alias": [
+    "cjm",
+    "justicia militar"
+   ],
+   "idNorma": 18914,
+   "identificacion": "Decreto 2226",
+   "vigenteDesde": "2023-04-10",
+   "articulos": 460,
+   "descargado": "2026-11-03"
+  },
+  {
+   "sigla": "cprp",
+   "nombre": "Código de Procedimiento Penal (antiguo)",
+   "alias": [
+    "cprp",
+    "procedimiento penal",
+    "cdpp"
+   ],
+   "idNorma": 22960,
+   "identificacion": "Ley 1853",
+   "vigenteDesde": "2013-12-27",
+   "articulos": 755,
+   "descargado": "2026-11-09"
+  }
+ ],
+ "leyes": [
+  {
+   "sigla": "ley19496",
+   "nombre": "Ley 19.496",
+   "alias": [
+    "ley del consumidor",
+    "consumidor"
+   ],
+   "idNorma": 1160403,
+   "identificacion": "DFL 3",
+   "vigenteDesde": "2025-07-11",
+   "articulos": 164,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Protección de los derechos de los consumidores"
+  },
+  {
+   "sigla": "ley18101",
+   "nombre": "Ley 18.101",
+   "alias": [
+    "arriendo",
+    "arrendamiento urbano"
+   ],
+   "idNorma": 29526,
+   "identificacion": "Ley 18101",
+   "vigenteDesde": "2022-06-30",
+   "articulos": 44,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Arrendamiento de predios urbanos"
+  },
+  {
+   "sigla": "ley19947",
+   "nombre": "Ley 19.947",
+   "alias": [
+    "matrimonio civil"
+   ],
+   "idNorma": 225128,
+   "identificacion": "Ley 19947",
+   "vigenteDesde": "2024-06-19",
+   "articulos": 109,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Matrimonio civil"
+  },
+  {
+   "sigla": "ley19968",
+   "nombre": "Ley 19.968",
+   "alias": [
+    "tribunales de familia"
+   ],
+   "idNorma": 229557,
+   "identificacion": "Ley 19968",
+   "vigenteDesde": "2026-07-22",
+   "articulos": 179,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Tribunales de familia"
+  },
+  {
+   "sigla": "ley14908",
+   "nombre": "Ley 14.908",
+   "alias": [
+    "pensiones de alimentos"
+   ],
+   "idNorma": 172986,
+   "identificacion": "DFL 1",
+   "vigenteDesde": "2025-08-28",
+   "articulos": 50,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Abandono de familia y pago de pensiones alimenticias"
+  },
+  {
+   "sigla": "ley16618",
+   "nombre": "Ley 16.618",
+   "alias": [
+    "ley de menores"
+   ],
+   "idNorma": 172986,
+   "identificacion": "DFL 1",
+   "vigenteDesde": "2025-08-28",
+   "articulos": 66,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Ley de Menores"
+  },
+  {
+   "sigla": "ley4808",
+   "nombre": "Ley 4.808",
+   "alias": [
+    "registro civil"
+   ],
+   "idNorma": 172986,
+   "identificacion": "DFL 1",
+   "vigenteDesde": "2025-08-28",
+   "articulos": 61,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Registro Civil"
+  },
+  {
+   "sigla": "ley17344",
+   "nombre": "Ley 17.344",
+   "alias": [
+    "cambio de nombre"
+   ],
+   "idNorma": 172986,
+   "identificacion": "DFL 1",
+   "vigenteDesde": "2025-08-28",
+   "articulos": 6,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Cambio de nombres y apellidos"
+  },
+  {
+   "sigla": "ley16271",
+   "nombre": "Ley 16.271",
+   "alias": [
+    "impuesto a las herencias",
+    "herencias"
+   ],
+   "idNorma": 172986,
+   "identificacion": "DFL 1",
+   "vigenteDesde": "2025-08-28",
+   "articulos": 82,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Impuesto a las herencias, asignaciones y donaciones"
+  },
+  {
+   "sigla": "ley21389",
+   "nombre": "Ley 21.389",
+   "alias": [
+    "registro de deudores"
+   ],
+   "idNorma": 1168463,
+   "identificacion": "Ley 21389",
+   "vigenteDesde": "2021-11-18",
+   "articulos": 11,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Registro Nacional de Deudores de Pensiones de Alimentos"
+  },
+  {
+   "sigla": "ley20830",
+   "nombre": "Ley 20.830",
+   "alias": [
+    "union civil",
+    "auc"
+   ],
+   "idNorma": 1075210,
+   "identificacion": "Ley 20830",
+   "vigenteDesde": "2022-03-10",
+   "articulos": 49,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Acuerdo de unión civil"
+  },
+  {
+   "sigla": "ley19620",
+   "nombre": "Ley 19.620",
+   "alias": [
+    "adopcion"
+   ],
+   "idNorma": 140084,
+   "identificacion": "Ley 19620",
+   "vigenteDesde": "2021-11-18",
+   "articulos": 49,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Adopción de menores"
+  },
+  {
+   "sigla": "ley20066",
+   "nombre": "Ley 20.066",
+   "alias": [
+    "vif",
+    "violencia intrafamiliar"
+   ],
+   "idNorma": 242648,
+   "identificacion": "Ley 20066",
+   "vigenteDesde": "2026-07-22",
+   "articulos": 35,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Violencia intrafamiliar"
+  },
+  {
+   "sigla": "ley20720",
+   "nombre": "Ley 20.720",
+   "alias": [
+    "insolvencia",
+    "quiebras"
+   ],
+   "idNorma": 1058072,
+   "identificacion": "Ley 20720",
+   "vigenteDesde": "2023-12-30",
+   "articulos": 455,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Insolvencia y reemprendimiento"
+  },
+  {
+   "sigla": "ley19880",
+   "nombre": "Ley 19.880",
+   "alias": [
+    "procedimiento administrativo"
+   ],
+   "idNorma": 210676,
+   "identificacion": "Ley 19880",
+   "vigenteDesde": "2026-11-01",
+   "articulos": 73,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Bases de los procedimientos administrativos"
+  },
+  {
+   "sigla": "ley18575",
+   "nombre": "Ley 18.575",
+   "alias": [
+    "bases generales de la administracion",
+    "locbgae"
+   ],
+   "idNorma": 191865,
+   "identificacion": "DFL 1",
+   "vigenteDesde": "2024-08-01",
+   "articulos": 84,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Bases generales de la Administración del Estado"
+  },
+  {
+   "sigla": "ley20285",
+   "nombre": "Ley 20.285",
+   "alias": [
+    "transparencia"
+   ],
+   "idNorma": 276363,
+   "identificacion": "Ley 20285",
+   "vigenteDesde": "2025-07-11",
+   "articulos": 62,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Acceso a la información pública"
+  },
+  {
+   "sigla": "ley19886",
+   "nombre": "Ley 19.886",
+   "alias": [
+    "compras publicas"
+   ],
+   "idNorma": 213004,
+   "identificacion": "Ley 19886",
+   "vigenteDesde": "2026-11-01",
+   "articulos": 115,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Compras públicas"
+  },
+  {
+   "sigla": "ley18010",
+   "nombre": "Ley 18.010",
+   "alias": [
+    "operaciones de credito"
+   ],
+   "idNorma": 29438,
+   "identificacion": "Ley 18010",
+   "vigenteDesde": "2025-06-04",
+   "articulos": 43,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Operaciones de crédito de dinero"
+  },
+  {
+   "sigla": "ley18092",
+   "nombre": "Ley 18.092",
+   "alias": [
+    "letra de cambio",
+    "pagare"
+   ],
+   "idNorma": 29517,
+   "identificacion": "Ley 18092",
+   "vigenteDesde": "2014-10-10",
+   "articulos": 115,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Letra de cambio y pagaré"
+  },
+  {
+   "sigla": "ley19983",
+   "nombre": "Ley 19.983",
+   "alias": [
+    "factura"
+   ],
+   "idNorma": 233421,
+   "identificacion": "Ley 19983",
+   "vigenteDesde": "2020-06-03",
+   "articulos": 14,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Factura (transferencia y mérito ejecutivo)"
+  },
+  {
+   "sigla": "ley18046",
+   "nombre": "Ley 18.046",
+   "alias": [
+    "sociedades anonimas"
+   ],
+   "idNorma": 29473,
+   "identificacion": "Ley 18046",
+   "vigenteDesde": "2026-01-01",
+   "articulos": 176,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Sociedades anónimas"
+  },
+  {
+   "sigla": "ley19628",
+   "nombre": "Ley 19.628",
+   "alias": [
+    "datos personales",
+    "vida privada"
+   ],
+   "idNorma": 141599,
+   "identificacion": "Ley 19628",
+   "vigenteDesde": "2023-05-09",
+   "articulos": 27,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Protección de la vida privada (datos personales)"
+  },
+  {
+   "sigla": "ley17336",
+   "nombre": "Ley 17.336",
+   "alias": [
+    "propiedad intelectual"
+   ],
+   "idNorma": 28933,
+   "identificacion": "Ley 17336",
+   "vigenteDesde": "2017-11-03",
+   "articulos": 161,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Propiedad intelectual"
+  },
+  {
+   "sigla": "ley16744",
+   "nombre": "Ley 16.744",
+   "alias": [
+    "accidentes del trabajo"
+   ],
+   "idNorma": 28650,
+   "identificacion": "Ley 16744",
+   "vigenteDesde": "2022-03-10",
+   "articulos": 113,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Accidentes del trabajo y enfermedades profesionales"
+  },
+  {
+   "sigla": "ley21643",
+   "nombre": "Ley 21.643",
+   "alias": [
+    "ley karin",
+    "acoso laboral"
+   ],
+   "idNorma": 1200096,
+   "identificacion": "Ley 21643",
+   "vigenteDesde": "2025-01-03",
+   "articulos": 7,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Ley Karin (acoso laboral y sexual)"
+  },
+  {
+   "sigla": "ley20609",
+   "nombre": "Ley 20.609",
+   "alias": [
+    "ley zamudio",
+    "antidiscriminacion"
+   ],
+   "idNorma": 1042092,
+   "identificacion": "Ley 20609",
+   "vigenteDesde": "2024-06-14",
+   "articulos": 18,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Antidiscriminación (Ley Zamudio)"
+  },
+  {
+   "sigla": "ley20000",
+   "nombre": "Ley 20.000",
+   "alias": [
+    "ley de drogas",
+    "drogas"
+   ],
+   "idNorma": 235507,
+   "identificacion": "Ley 20000",
+   "vigenteDesde": "2026-05-23",
+   "articulos": 83,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Tráfico ilícito de estupefacientes"
+  },
+  {
+   "sigla": "ley20084",
+   "nombre": "Ley 20.084",
+   "alias": [
+    "rpa",
+    "responsabilidad penal adolescente"
+   ],
+   "idNorma": 244803,
+   "identificacion": "Ley 20084",
+   "vigenteDesde": "2222-02-02",
+   "articulos": 97,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Responsabilidad penal adolescente"
+  },
+  {
+   "sigla": "ley18216",
+   "nombre": "Ley 18.216",
+   "alias": [
+    "penas sustitutivas"
+   ],
+   "idNorma": 29636,
+   "identificacion": "Ley 18216",
+   "vigenteDesde": "2025-02-12",
+   "articulos": 63,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Penas sustitutivas"
+  },
+  {
+   "sigla": "ley20393",
+   "nombre": "Ley 20.393",
+   "alias": [
+    "personas juridicas"
+   ],
+   "idNorma": 1008668,
+   "identificacion": "Ley 20393",
+   "vigenteDesde": "2024-09-01",
+   "articulos": 38,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Responsabilidad penal de las personas jurídicas"
+  },
+  {
+   "sigla": "ley19913",
+   "nombre": "Ley 19.913",
+   "alias": [
+    "lavado de activos",
+    "uaf"
+   ],
+   "idNorma": 219119,
+   "identificacion": "Ley 19913",
+   "vigenteDesde": "2026-05-30",
+   "articulos": 50,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Unidad de Análisis Financiero y lavado de activos"
+  },
+  {
+   "sigla": "ley18290",
+   "nombre": "Ley 18.290",
+   "alias": [
+    "transito",
+    "ley de transito"
+   ],
+   "idNorma": 1007469,
+   "identificacion": "DFL 1",
+   "vigenteDesde": "2026-10-22",
+   "articulos": 259,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Ley de Tránsito"
+  },
+  {
+   "sigla": "ley21442",
+   "nombre": "Ley 21.442",
+   "alias": [
+    "copropiedad"
+   ],
+   "idNorma": 1174663,
+   "identificacion": "Ley 21442",
+   "vigenteDesde": "2026-09-23",
+   "articulos": 115,
+   "descargado": "2026-11-09",
+   "tipo": "ley",
+   "tema": "Copropiedad inmobiliaria"
+  }
+ ]
+}
