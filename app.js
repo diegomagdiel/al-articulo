@@ -159,7 +159,30 @@ function interpretar(texto) {
 const prioridadCodigos = () => [...new Set([...leer("alarticulo:recientes", []).map(r => r.sigla), ...INDICE.codigos.map(c => c.sigla)])]
   .filter(s => esCodigo(s) || CODIGOS[s]);
 
+// Leyes disponibles (precargadas + abiertas a pedido) cuyo número empieza con los dígitos escritos
+const numLey = s => s.slice(3);
+function leyesPorNumero(digitos) {
+  const todas = [...INDICE.leyes.map(l => l.sigla), ...LEYES.map(l => l.sigla)].filter(s => /^ley\d+$/.test(s));
+  return [...new Set(todas)].filter(s => numLey(s).startsWith(digitos))
+    .sort((x, y) => numLey(x).length - numLey(y).length || numLey(x).localeCompare(numLey(y)));
+}
+// "ley", "leyes", "ley 18", "ley n° 19.4": el usuario está buscando una ley por su número
+const RE_LEY_PARCIAL = /^\s*(?:leyes|ley|l\.)\s*(?:n(?:ro|°|º|\.)?\s*)?([\d.]*)\s*$/i;
+
 async function sugerir(texto) {
+  const parcial = texto.match(RE_LEY_PARCIAL);
+  const completa = parcial && interpretar(texto).sigla;   // número completo ("ley 19496")
+  // Con el número completo de una ley disponible se sigue el flujo normal (abre su índice)
+  if (parcial && !(completa && (esPrecargada(completa) || CODIGOS[completa] || API))) {
+    const dig = parcial[1].replace(/\./g, "");
+    const lista = leyesPorNumero(dig);
+    const res = lista.slice(0, 12).map(s => ({ s, indice: true }));
+    const items = res.length ? [{ titulo: dig ? `Leyes que empiezan con ${conPuntos(dig)}` : `Leyes incluidas (${INDICE.leyes.length})` }, ...res] : [];
+    if (!dig || lista.length > 12) items.push({ ir: "#/leyes", texto: "Ver todas las leyes" });
+    if (completa) items.push({ ayuda: `La ${esc(nombreCodigo(completa))} todavía no está incluida en el prototipo. <a href="${urlBcnLey(completa)}" target="_blank" rel="noopener">Ábrela en la BCN ↗</a>` });
+    else if (!res.length) items.push({ ayuda: "Ninguna ley incluida empieza con ese número. Sigue escribiendo el número completo." });
+    return items;
+  }
   const q = interpretar(texto);
   // Ley que todavía no está cargada: se pide a la BCN y se vuelve a sugerir cuando llegue
   if (q.sigla && esPrecargada(q.sigla) && !CODIGOS[q.sigla]) await cargarCodigo(q.sigla);
@@ -185,6 +208,11 @@ async function sugerir(texto) {
         const prefijo = q.sigla && /^\d+$/.test(q.num) && a.base.startsWith(q.num) && a.base.length <= q.num.length + 1;
         if (mismaBase || prefijo) res.push({ s, a });
       }
+    }
+    // Solo un número de ley ("19496"): ofrecer la ley también
+    if (!q.sigla && /^\d{4,5}$/.test(q.num) && !q.palabras.length) {
+      const leyes = leyesPorNumero(q.num).filter(s => numLey(s) === q.num).map(s => ({ s, indice: true }));
+      if (leyes.length) return [...leyes, ...res.slice(0, 9)];
     }
     if (!res.length) return [{ ayuda: `No encontré el artículo ${esc(q.num)}${q.sigla ? " en " + esc(nombreCodigo(q.sigla)) : ""}.` }];
     return res.slice(0, 10);
@@ -297,6 +325,7 @@ function htmlSug(x, i, palabras) {
       <div class="sug-texto">${detalle}</div></li>`;
   }
   if (x.titulo) return `<li class="sug-seccion" role="presentation">${esc(x.titulo)}</li>`;
+  if (x.ir) return `<li role="option" data-i="${i}" aria-selected="${i === sugSel}"><div class="sug-titulo">${esc(x.texto)} →</div></li>`;
   if (x.indice) return `<li role="option" data-i="${i}"><div class="sug-titulo">${esc(nombreCodigo(x.s))}</div><div class="sug-texto">${esc(INDICE.leyes.find(l => l.sigla === x.s)?.tema || CODIGOS[x.s]?.nombreLargo || "Ver índice completo")}</div></li>`;
   if (x.bcn) return `<li role="option" data-i="${i}"><div class="sug-titulo">${esc(x.bcn.norma)}${x.bcn.derogada ? ' <span class="etq derogado">Derogada</span>' : ""}</div><div class="sug-texto">${esc(x.bcn.comun || x.bcn.titulo)}</div></li>`;
   const marcas = notaDe(x.s, x.a) ? `<span class="nota-ic" title="Tiene notas">📝</span>` : "";
@@ -305,7 +334,7 @@ function htmlSug(x, i, palabras) {
     <div class="sug-texto">${fragmento(x.a, palabras)}</div></li>`;
 }
 function mostrarSug(items) {
-  sugActual = items; sugSel = items.findIndex(x => x.a || x.indice || x.bcn);
+  sugActual = items; sugSel = items.findIndex(x => x.a || x.indice || x.bcn || x.ir);
   listaSug.innerHTML = items.map((x, i) => htmlSug(x, i, items.palabras)).join("");
   const estabaOculta = listaSug.hidden;
   listaSug.hidden = !items.length;
@@ -350,12 +379,13 @@ function elegir(i) {
   if (!x || x.ayuda || x.titulo) return;
   cerrarSug(); entrada.value = ""; entrada.blur(); ponerSoloNotas(false);
   if (x.bcn) return navegar(`#/n${x.bcn.idNorma}`);
+  if (x.ir) return navegar(x.ir);
   navegar(x.indice ? `#/${x.s}` : `#/${x.s}/${encodeURIComponent(x.a.n)}`);
 }
 entrada.addEventListener("input", actualizarSugerencias);
 entrada.addEventListener("focus", () => { if (entrada.value || soloNotas) actualizarSugerencias(); });
 entrada.addEventListener("keydown", e => {
-  const elegibles = sugActual.map((x, i) => (x.a || x.indice || x.bcn ? i : -1)).filter(i => i >= 0);
+  const elegibles = sugActual.map((x, i) => (x.a || x.indice || x.bcn || x.ir ? i : -1)).filter(i => i >= 0);
   if (e.key === "ArrowDown" || e.key === "ArrowUp") {
     e.preventDefault();
     if (!elegibles.length) return;

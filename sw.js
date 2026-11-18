@@ -1,5 +1,5 @@
 // Funciona sin conexión después de la primera visita: muestra lo guardado y actualiza en segundo plano.
-const CACHE = "al-articulo-v3";
+const CACHE = "al-articulo-v4";
 const BASICOS = ["./", "index.html", "estilos.css", "app.js", "manifest.webmanifest", "icono.svg", "datos/indice.json"];
 
 self.addEventListener("install", e => {
