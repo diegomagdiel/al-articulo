@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-09",
+ "actualizado": "2026-11-25",
  "codigos": [
   {
    "sigla": "cpr",
@@ -59,7 +59,7 @@
    "identificacion": "Codigo PENAL",
    "vigenteDesde": "2026-08-20",
    "articulos": 677,
-   "descargado": "2026-11-03"
+   "descargado": "2026-11-25"
   },
   {
    "sigla": "cpp",
@@ -554,7 +554,7 @@
    "identificacion": "Ley 19628",
    "vigenteDesde": "2023-05-09",
    "articulos": 27,
-   "descargado": "2026-11-09",
+   "descargado": "2026-11-25",
    "tipo": "ley",
    "tema": "Protección de la vida privada (datos personales)"
   },
