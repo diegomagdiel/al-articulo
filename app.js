@@ -170,6 +170,8 @@ function leyesPorNumero(digitos) {
 const RE_LEY_PARCIAL = /^\s*(?:leyes|ley|l\.)\s*(?:n(?:ro|°|º|\.)?\s*)?([\d.]*)\s*$/i;
 
 async function sugerir(texto) {
+  // "19.496" escrito con punto es un número de ley, no "19" + "496"
+  if (/^\s*\d{1,2}\.\d{1,3}\s*$/.test(texto)) texto = texto.replace(/\./g, "");
   const parcial = texto.match(RE_LEY_PARCIAL);
   const completa = parcial && interpretar(texto).sigla;   // número completo ("ley 19496")
   // Con el número completo de una ley disponible se sigue el flujo normal (abre su índice)
@@ -209,10 +211,16 @@ async function sugerir(texto) {
         if (mismaBase || prefijo) res.push({ s, a });
       }
     }
-    // Solo un número de ley ("19496"): ofrecer la ley también
-    if (!q.sigla && /^\d{4,5}$/.test(q.num) && !q.palabras.length) {
-      const leyes = leyesPorNumero(q.num).filter(s => numLey(s) === q.num).map(s => ({ s, indice: true }));
-      if (leyes.length) return [...leyes, ...res.slice(0, 9)];
+    // Solo un número ("194", "19496"): primero las leyes cuyo número calza, después los artículos
+    if (!q.sigla && /^\d{3,5}$/.test(q.num) && !q.palabras.length) {
+      const leyes = leyesPorNumero(q.num).slice(0, 4).map(s => ({ s, indice: true }));
+      if (leyes.length) return res.length
+        ? [{ titulo: "Leyes" }, ...leyes, { titulo: "Artículos" }, ...res.slice(0, 8)]
+        : leyes;
+      if (!res.length && /^\d{4,5}$/.test(q.num)) {
+        const s = "ley" + q.num;
+        return [{ ayuda: `No hay artículo ${esc(q.num)} en los códigos. ¿Buscas la ${esc(nombreCodigo(s))}? Todavía no está incluida: <a href="${urlBcnLey(s)}" target="_blank" rel="noopener">ábrela en la BCN ↗</a>` }];
+      }
     }
     if (!res.length) return [{ ayuda: `No encontré el artículo ${esc(q.num)}${q.sigla ? " en " + esc(nombreCodigo(q.sigla)) : ""}.` }];
     return res.slice(0, 10);
